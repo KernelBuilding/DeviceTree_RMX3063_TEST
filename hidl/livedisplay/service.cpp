@@ -15,7 +15,7 @@
  */
 
 #ifdef LIVES_IN_SYSTEM
-#define LOG_TAG "lineage.livedisplay@2.0-service-RMX3063"
+#define LOG_TAG "lineage.livedisplay@2.0-service-RMX3061"
 #else
 #define LOG_TAG "vendor.lineage.livedisplay@2.0-service-mediatek"
 #endif
