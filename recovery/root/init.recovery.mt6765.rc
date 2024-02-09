@@ -1,20 +1,25 @@
-on fs
-    start prepdecrypt
+on init
+    write /sys/class/leds/lcd-backlight/brightness 255
 
-service keystore_auth /system/bin/keystore_auth
+on fs
+    install_keyring
+    mkdir /mnt/vendor/persist 0777 system system
+    setprop crypto.ready 1
+
+service keystore_auth /sbin/keystore_auth
     oneshot
     user system
     group root
     disabled
     seclabel u:r:recovery:s0
 
-service keystore /system/bin/keystore /tmp/misc/keystore
+service keystore /sbin/keystore /tmp/misc/keystore
     user root
     group root drmrpc readproc
     disabled
     seclabel u:r:recovery:s0
 
-service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry \
+service mobicore /sbin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry \
     -r /vendor/app/mcRegistry/06090000000000000000000000000000.drbin \
     -r /vendor/app/mcRegistry/020f0000000000000000000000000000.drbin \
     -r /vendor/app/mcRegistry/05120000000000000000000000000000.drbin
@@ -24,37 +29,25 @@ service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
     seclabel u:r:recovery:s0
 
 #Add for OPPO FBE
-service hal_cryptoeng_oppo /system/bin/vendor.oppo.hardware.cryptoeng@1.0-service
+service hal_cryptoeng_oppo /sbin/vendor.oppo.hardware.cryptoeng@1.0-service
     user root
     group root drmrpc
     disabled
     seclabel u:r:recovery:s0
 
-service keymaster-4-0 /system/bin/android.hardware.keymaster@4.0-service.trustonic
+service keymaster-4-0 /sbin/android.hardware.keymaster@4.0-service.trustonic
     user root
     group root drmrpc
     disabled
     seclabel u:r:recovery:s0
 
-service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
+service gatekeeper-1-0 /sbin/android.hardware.gatekeeper@1.0-service
     user root
     group root
     disabled
     seclabel u:r:recovery:s0
 
-service prepdecrypt /system/bin/prepdecrypt.sh
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
-
-on property:crypto.ready=1 && property:ro.crypto.state=encrypted
-    mkdir /mnt/vendor/persist
-    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
-    install_keyring
-
-on property:crypto.ready=1 && property:hwservicemanager.ready=true
+on property:hwservicemanager.ready=true
     start hal_cryptoeng_oppo
     start mobicore
     start keymaster-4-0
@@ -63,17 +56,28 @@ on property:crypto.ready=1 && property:hwservicemanager.ready=true
 on property:ro.crypto.state=unsupported
     stop hal_cryptoeng_oppo
     stop mobicore
+    stop servicemanager
+    stop hwservicemanager
     stop keymaster-4-0
     stop gatekeeper-1-0
 
 on property:ro.crypto.state=unencrypted
     stop hal_cryptoeng_oppo
     stop mobicore
+    stop servicemanager
+    stop hwservicemanager
     stop keymaster-4-0
     stop gatekeeper-1-0
 
 on property:twrp.decrypt.done=true
     stop hal_cryptoeng_oppo
     stop mobicore
+    stop servicemanager
+    stop hwservicemanager
     stop keymaster-4-0
     stop gatekeeper-1-0
+
+on property:sys.usb.config=fastboot
+    start servicemanager
+    start hwservicemanager
+    restart fastbootd
