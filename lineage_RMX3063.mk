@@ -20,8 +20,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from device makefile
 $(call inherit-product, device/realme/RMX3063/device.mk)
-
-# Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/realme/RMX3063/RMX3063-vendor.mk)
 
 # Inherit some common LineageOS stuff.
