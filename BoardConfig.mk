@@ -56,9 +56,6 @@ TARGET_BOARD_PLATFORM := mt6765
 TARGET_BOOTLOADER_BOARD_NAME := oppo6765
 TARGET_NO_BOOTLOADER := true
 
-#Build
-BUILD_BROKEN_DUP_RULES := true
-
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery androidboot.selinux=permissive
