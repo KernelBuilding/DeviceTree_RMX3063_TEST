@@ -32,6 +32,7 @@ PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C20
 PRODUCT_MANUFACTURER := realme
 
+# Bootanimation
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Build info
