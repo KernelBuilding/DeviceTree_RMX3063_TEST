@@ -25,15 +25,6 @@ $(call inherit-product, vendor/realme/RMX3063/RMX3063-vendor.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Parts
-PRODUCT_PACKAGES += \
-    parts.rc \
-    RealmeParts
-
-# Realme Dirac
-PRODUCT_PACKAGES += \
-    RealmeDirac
-
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # VNDK
