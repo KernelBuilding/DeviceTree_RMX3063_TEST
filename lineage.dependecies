@@ -1,18 +1,10 @@
 [
   {
-    "repository": "android_hardware_mediatek",
-    "target_path": "hardware/mediatek"
-  },
-  {
-    "repository": "android_kernel_RMX3063Q",
-    "target_path": "kernel/realme/RMX3063"
-  },
-  {
     "repository": "VendorTree_RMX3063",
     "target_path": "vendor/realme/RMX3063"
-  },
-  {
-    "repository": "android_packages_apps_RealmeParts",
-    "target_path": "packages/apps/RealmeParts"
+},
+{
+    "repository": "devices_tree_rmx3063",
+    "target_path": "device/realme/RMX3063"
   }
 ]
