@@ -16,12 +16,12 @@
 
 DEVICE_PATH := device/realme/RMX3063
 
-#Assert
+# Assert
 TARGET_OTA_ASSERT_DEVICE := RMX3063,RMX3061
 
 ALLOW_MISSING_DEPENDENCIES := true
 
-#Build
+# Build
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -159,9 +159,6 @@ TARGET_LD_SHIM_LIBS := /system/lib/libshowlogo.so|libshim_showlogo.so
 
 # Treble
 TARGET_COPY_OUT_PRODUCT := system/product
-
-#DPI
-TARGET_SCREEN_DENSITY := 423
 
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
