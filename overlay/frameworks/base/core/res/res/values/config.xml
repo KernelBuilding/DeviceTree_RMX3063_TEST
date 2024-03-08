@@ -41,9 +41,8 @@
 
     <!-- Whether device has screen with higher aspect ratio -->
      <bool name="config_haveHigherAspectRatioScreen">true</bool>
-
 	
-	<!-- Flag specifying whether VoLTE should be available for carrier: independent of
+    <!-- Flag specifying whether VoLTE should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
      <bool name="config_carrier_volte_available">false</bool>
@@ -237,12 +236,6 @@
     <!-- The restoring is handled by modem if it is true-->
      <bool name="skip_restoring_network_selection">false</bool>
 
-    <!-- Define Rounded Corner -->
-    <dimen name="rounded_corner_radius_bottom">128.0px</dimen>
-    <dimen name="rounded_corner_radius_bottom_adjustment">46.0px</dimen>
-    <dimen name="rounded_corner_radius_top">144.0px</dimen>
-    <dimen name="rounded_corner_radius_top_adjustment">79.0px</dimen>
-
     <!-- Height of the status bar -->
      <dimen name="status_bar_height_portrait">32.0dip</dimen>
 
@@ -250,12 +243,12 @@
          auto-brightness adjustment setting. -->
      <fraction name="config_autoBrightnessAdjustmentMaxGamma">300.0%</fraction>
 	
-    <!-- Whether to post reset runnable for all clients. Needed for some older
+        <!-- Whether to post reset runnable for all clients. Needed for some older
          vendor fingerprint HAL implementations. -->
-    <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
+     <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
 
 	<!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
-    <bool name="config_cleanupUnusedFingerprints">false</bool>
+     <bool name="config_cleanupUnusedFingerprints">false</bool>
     
 	<!-- User activity timeout: Maximum screen dim duration as a percentage of screen off timeout.
     

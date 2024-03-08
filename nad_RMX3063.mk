@@ -22,16 +22,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/RMX3063/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common.mk)
+$(call inherit-product, vendor/nusantara/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_RMX3063
+PRODUCT_NAME := nad_RMX3063
 PRODUCT_DEVICE := RMX3063
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C20
 PRODUCT_MANUFACTURER := realme
 
-# Sakura build flags
+# NusantaraProject stuff
+NAD_BUILD_TYPE := UNOFFICIAL
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Build info
@@ -47,4 +48,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 # Time
-LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
+# LINEAGE_VERSION_APPEND_TIME_OF_DAY := true

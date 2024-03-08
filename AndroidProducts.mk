@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_RMX3063.mk
+    $(LOCAL_DIR)/nad_RMX3063.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_RMX3063-user \
-    lineage_RMX3063-userdebug \
-    lineage_RMX3063-eng
+    nad_RMX3063-user \
+    nad_RMX3063-userdebug \
+    nad_RMX3063-eng
