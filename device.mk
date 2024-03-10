@@ -40,7 +40,6 @@ TARGET_SCREEN_WIDTH := 720
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
     GoogleCameraGo
 
 PRODUCT_COPY_FILES += \

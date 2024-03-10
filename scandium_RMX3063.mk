@@ -22,10 +22,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/RMX3063/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/nusantara/config/common.mk)
+$(call inherit-product, vendor/scandium/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := nad_RMX3063
+PRODUCT_NAME := scandium_RMX3063
 PRODUCT_DEVICE := RMX3063
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C20
