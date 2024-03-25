@@ -148,9 +148,9 @@ void vendor_load_properties()
           break;
     fin.close();
 
-    if (buf.find("S98635AA1") != std::string::npos) {
+    if (buf.find("17") != std::string::npos) {
         setRMX(0); // RMX3063
-    } else if (buf.find("S98639AA1") != std::string::npos) {
+    } else if (buf.find("16") != std::string::npos) {
         setRMX(1); //RMX3061
     }
 
