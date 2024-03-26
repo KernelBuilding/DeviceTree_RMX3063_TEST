@@ -22,17 +22,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/RMX3063/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/nusantara/config/common.mk)
+$(call inherit-product, vendor/octavi/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := nad_RMX3063
+PRODUCT_NAME := octavi_RMX3063
 PRODUCT_DEVICE := RMX3063
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C20
 PRODUCT_MANUFACTURER := realme
 
-# NusantaraProject stuff
-NAD_BUILD_TYPE := UNOFFICIAL
+# INFORMATION
+OCTAVI_BUILD_TYPE := COMMUNITY
+OCTAVI_MAINTAINER := PGYT_PROJECT
+
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Build info
