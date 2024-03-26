@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/nad_RMX3063.mk
+    $(LOCAL_DIR)/octavi_RMX3063.mk
 
 COMMON_LUNCH_CHOICES := \
-    nad_RMX3063-user \
-    nad_RMX3063-userdebug \
-    nad_RMX3063-eng
+    octavi_RMX3063-user \
+    octavi_RMX3063-userdebug \
+    octavi_RMX3063-eng
