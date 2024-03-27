@@ -41,6 +41,9 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_USES_BLUR := false
 
+# Official dotOS
+DOT_OFFICIAL := false
+
 # Build info
 BUILD_FINGERPRINT := "google/redfin/redfin:12/SP1A.211105.003/7757856:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
