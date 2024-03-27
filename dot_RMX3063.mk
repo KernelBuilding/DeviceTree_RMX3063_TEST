@@ -22,22 +22,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/RMX3063/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/octavi/config/common.mk)
+$(call inherit-product, vendor/dot/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := octavi_RMX3063
+PRODUCT_NAME := dot_RMX3063
 PRODUCT_DEVICE := RMX3063
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C20
 PRODUCT_MANUFACTURER := realme
 
-# INFORMATION
-OCTAVI_BUILD_TYPE := UNOFFICIAL
-OCTAVI_MAINTAINER := PGYT_PROJECT
-
 WITH_GMS := false
 
+# Device Maintainer
+DEVICE_MAINTAINER := PGYT_PROJECT
+
+# FaceUnlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 720
+TARGET_USES_BLUR := false
 
 # Build info
 BUILD_FINGERPRINT := "google/redfin/redfin:12/SP1A.211105.003/7757856:user/release-keys"
