@@ -1,9 +1,3 @@
-# Blurs
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.surface_flinger.supports_background_blur=1
-    ro.sf.blurs_are_expensive=1 \
-    persist.sys.sf.disable_blurs=1
-
 # Camera
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.pixelexperience.faceunlock \
@@ -29,15 +23,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Display
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.sf.lcd_density=320
-	
-# Hardware Acceleration
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    video.accelerate.hw=1 \
-    debug.sf.hw=1 \
-    debug.performance.tuning=1 \
-    debug.egl.profiler=1 \
-    debug.egl.hw=1 \
-    debug.composition.type=gpu
 
 # IMS
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -45,28 +30,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1
 	
-# LMKD
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.lmk.psi_complete_stall_ms=150 \
-    ro.lmk.swap_free_low_percentage=20 \
-    ro.lmk.kill_timeout_ms=100
-
-# OMX
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    debug.stagefright.omx_default_rank.sw-audio=1 \
-    debug.stagefright.omx_default_rank=0 \
-    debug.stagefright.ccodec=0
-
-# Performance
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.mtk_perf_simple_start_win=1 \
-    ro.mtk_perf_fast_start_win=1 \
-    ro.mtk_perf_response_time=1
-
-# Privapp permissions whitelisting
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.control_privapp_permissions=log
-
 # Surfaceflinger
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.sf.latch_unsignaled=1 \
@@ -78,12 +41,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
     debug.sf.enable_hwc_vds=0
 
-# ZRAM
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.zram.mark_idle_delay_mins=60 \
-    ro.zram.first_wb_delay_mins=180 \
-    ro.zram.periodic_wb_delay_hours=24
-	
 # Tweak the memory management of the device, enable more background apps.. etc..
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.fha_enable=true \
@@ -95,14 +52,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.dha_th_rate=2.3 \
     ro.config.sdha_apps_bg_max=64 \
     ro.config.sdha_apps_bg_min=8
-
-# GBoard
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.ime.kb_pad_port_b=1 \
-    ro.com.google.ime.corner_key_r=35
-
-# WFD
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.wfd.nohdcp=1 \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0
