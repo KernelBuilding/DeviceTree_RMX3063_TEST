@@ -22,18 +22,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/RMX3063/device.mk)
 
 # Inherit ArrowOS 
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/derp/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_RMX3063
+PRODUCT_NAME := derp_RMX3063
 PRODUCT_DEVICE := RMX3063
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C20
 PRODUCT_MANUFACTURER := realme
 
 # Bootanimation
-# ArrowOS additions
-DEVICE_MAINTAINER := PGYT PROJECT
+DERP_BUILDTYPE := Unofficial
+TARGET_USES_BLUR := false
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Build info
