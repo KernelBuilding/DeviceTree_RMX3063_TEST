@@ -41,6 +41,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
     debug.sf.enable_hwc_vds=0
 
+# Maintainer
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.octavi.maintainer=PGYT_PROJECT
+
 # Tweak the memory management of the device, enable more background apps.. etc..
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.fha_enable=true \
