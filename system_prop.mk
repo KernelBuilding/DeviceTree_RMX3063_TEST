@@ -43,8 +43,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Chipset
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-   ro.soc.manufacturer=MediaTek \
-   ro.soc.model=MT6765
+    ro.soc.manufacturer=MediaTek \
+    ro.soc.model=MT6765
 
 # Tweak the memory management of the device, enable more background apps.. etc..
 PRODUCT_PROPERTY_OVERRIDES += \
