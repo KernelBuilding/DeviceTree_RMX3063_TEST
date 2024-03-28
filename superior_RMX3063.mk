@@ -38,6 +38,9 @@ SUPERIOR_UNOFFICIAL := true
 TARGET_INCLUDE_MATLOG := false
 WITH_GMS := false
 
+# Superior stuff
+TARGET_ENABLE_BLUR := false
+
 # Build info
 BUILD_FINGERPRINT := "google/redfin/redfin:12/SP1A.211105.003/7757856:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
