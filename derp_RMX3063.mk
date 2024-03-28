@@ -35,6 +35,7 @@ PRODUCT_MANUFACTURER := realme
 DERP_BUILDTYPE := Unofficial
 TARGET_USES_BLUR := false
 TARGET_BOOT_ANIMATION_RES := 720
+WITH_GMS := false
 
 # Build info
 BUILD_FINGERPRINT := "google/redfin/redfin:12/SP1A.211105.003/7757856:user/release-keys"
