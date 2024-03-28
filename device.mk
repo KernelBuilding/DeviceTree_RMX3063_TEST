@@ -16,9 +16,6 @@
 
 DEVICE_PATH := device/realme/RMX3063
 
-# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-
 # Call proprietary blob setup
 $(call inherit-product, vendor/realme/RMX3063/RMX3063-vendor.mk)
 
@@ -40,7 +37,6 @@ TARGET_SCREEN_WIDTH := 720
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
     GoogleCameraGo
 
 PRODUCT_COPY_FILES += \
