@@ -37,6 +37,8 @@ SUPERIOR_OFFICIAL := false
 SUPERIOR_UNOFFICIAL := true
 TARGET_INCLUDE_MATLOG := false
 WITH_GMS := false
+BUILD_WITH_GAPPS := false
+SUPERIOR_GAPPS := false
 
 # Superior stuff
 TARGET_ENABLE_BLUR := false
