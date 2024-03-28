@@ -46,6 +46,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.soc.manufacturer=MediaTek \
     ro.soc.model=MT6765
 
+# Maintainer
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.superior.maintainer=PGYT_PROJECT \
+    ro.superior.maintainer_name=PGYT_PROJECT
+
 # Tweak the memory management of the device, enable more background apps.. etc..
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.fha_enable=true \
