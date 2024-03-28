@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "VendorTree_RMX3063",
+    "target_path": "vendor/realme/RMX3063"
+},
+{
+    "repository": "devices_tree_rmx3063",
+    "target_path": "device/realme/RMX3063"
+  }
+]
