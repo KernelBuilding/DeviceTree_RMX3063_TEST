@@ -40,9 +40,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 	ro.fluid.maintainer=PGYT_PROJECT \
 	ro.fluid.cpu=MT6765
 
-# GApps
-TARGET_INCLUDE_GAPPS := false
+ifeq ($(WITH_GAPPS),true)
 TARGET_GAPPS_ARCH := false
+TARGET_INCLUDE_GAPPS := false
+endif
 
 # Build info
 BUILD_FINGERPRINT := "google/redfin/redfin:12/SP1A.211105.003/7757856:user/release-keys"
