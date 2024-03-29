@@ -24,6 +24,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.sf.lcd_density=320
 
+# Set system properties identifying the chipset
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.soc.manufacturer=MediaTek \
+    ro.soc.model=MT6765
+
 # IMS
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
