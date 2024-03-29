@@ -41,6 +41,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 	ro.fluid.cpu=MT6765
 
 TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_GAPPS := false
 
 # Build info
 BUILD_FINGERPRINT := "google/redfin/redfin:12/SP1A.211105.003/7757856:user/release-keys"
