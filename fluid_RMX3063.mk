@@ -22,10 +22,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/RMX3063/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common.mk)
+$(call inherit-product, vendor/fluid/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_RMX3063
+PRODUCT_NAME := fluid_RMX3063
 PRODUCT_DEVICE := RMX3063
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C20
@@ -33,6 +33,16 @@ PRODUCT_MANUFACTURER := realme
 
 # Sakura build flags
 TARGET_BOOT_ANIMATION_RES := 720
+
+# Fluid flags
+FLUID_BUILD_TYPE := OFFICIAL
+PRODUCT_PRODUCT_PROPERTIES += \
+	ro.fluid.maintainer=PGYT_PROJECT \
+	ro.fluid.cpu=MT6765
+
+# GApps
+TARGET_INCLUDE_GAPPS := false
+TARGET_GAPPS_ARCH := false
 
 # Build info
 BUILD_FINGERPRINT := "google/redfin/redfin:12/SP1A.211105.003/7757856:user/release-keys"
