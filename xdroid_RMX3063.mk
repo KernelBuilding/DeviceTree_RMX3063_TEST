@@ -21,20 +21,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/realme/RMX3063/device.mk)
 
-# Inherit ArrowOS 
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common xdroidsp stuff
+$(call inherit-product, vendor/xdroid/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_RMX3063
+PRODUCT_NAME := xdroid_RMX3063
 PRODUCT_DEVICE := RMX3063
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C20
 PRODUCT_MANUFACTURER := realme
 
 # Bootanimation
-# ArrowOS additions
-DEVICE_MAINTAINER := PGYT PROJECT
 TARGET_BOOT_ANIMATION_RES := 720
+
+XDROID_BOOT := 720
+XDROID_MAINTAINER := PGYT_PROJECT
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_SUPPORTS_QUICK_TAP := true
 
 # Build info
 BUILD_FINGERPRINT := "google/redfin/redfin:12/SP1A.211105.003/7757856:user/release-keys"
