@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_RMX3063.mk
+    $(LOCAL_DIR)/fluid_RMX3063.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_RMX3063-user \
-    arrow_RMX3063-userdebug \
-    arrow_RMX3063-eng
+    fluid_RMX3063-user \
+    fluid_RMX3063-userdebug \
+    fluid_RMX3063-eng
