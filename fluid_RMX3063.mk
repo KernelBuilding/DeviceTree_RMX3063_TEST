@@ -21,20 +21,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/realme/RMX3063/device.mk)
 
-# Inherit ArrowOS 
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common LineageOS stuff.
+$(call inherit-product, vendor/fluid/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_RMX3063
+PRODUCT_NAME := fluid_RMX3063
 PRODUCT_DEVICE := RMX3063
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C20
 PRODUCT_MANUFACTURER := realme
 
-# Bootanimation
-# ArrowOS additions
-DEVICE_MAINTAINER := PGYT PROJECT
+# Sakura build flags
 TARGET_BOOT_ANIMATION_RES := 720
+
+# Fluid flags
+FLUID_BUILD_TYPE := UNOFFICIAL
+PRODUCT_PRODUCT_PROPERTIES += \
+	ro.fluid.maintainer=PGYT_PROJECT \
+	ro.fluid.cpu=MT6765
+
+TARGET_INCLUDE_GAPPS := false
 
 # Build info
 BUILD_FINGERPRINT := "google/redfin/redfin:12/SP1A.211105.003/7757856:user/release-keys"
